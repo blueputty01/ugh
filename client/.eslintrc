@@ -5,7 +5,10 @@
     "node": true,
     "jest": true
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaVersion": 2016,
     "sourceType": "module",
@@ -14,10 +17,27 @@
       "jsx": true
     }
   },
-  "plugins": ["prettier", "react"],
+  "plugins": [
+    "prettier",
+    "react"
+  ],
   "parser": "@babel/eslint-parser",
   "rules": {
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ]
   },
-  "ignorePatterns": ["/build", "/node_modules"]
+  "ignorePatterns": [
+    "/build",
+    "/node_modules"
+  ]
 }
