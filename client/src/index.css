@@ -47,6 +47,12 @@
   color: white;
   background-color: #312dff;
   border: 0.0625rem solid #312dff;
+  box-shadow: 0 3px rgb(90, 139, 255);
+}
+.continue:active {
+  background-color: #4440fd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .webcam-btn {
   border-radius: 0.625rem;
@@ -54,7 +60,13 @@
   width: 233px;
   color: white;
   background-color: #312dff;
+  box-shadow: 0 3px rgb(90, 139, 255);
   border: 0.0625rem solid #312dff;
+}
+.web-btn:active {
+  background-color: #4440fd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .webcam-container {
   height: 100vh;
