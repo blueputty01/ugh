@@ -37,10 +37,8 @@ Build client: `npm run build`
 ### 💻 Client:
 
 - React
-- SASS
+- Tailwind CSS
 
 ### 🌐 Server:
 
 - Express.js
-
-Makes use of [Donut 🍩 : Document Understanding Transformer](https://github.com/clovaai/donut). Academic paper found here: https://arxiv.org/abs/2111.15664
