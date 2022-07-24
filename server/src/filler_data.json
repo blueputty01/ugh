@@ -1,0 +1,75 @@
+{
+    "number_of_products": 7,
+    "products": {
+        "1": {
+            "name": "Soap Bar",
+            "brand": "Dove",
+            "carbon_footprint":"yet to implement",
+            "price": 5.79,
+            "vote_count": 0,
+            "share_link": "https://www.target.com/p/dove-beauty-white-deep-moisture-beauty-bar-soap-4pk-3-75oz-each/-/A-11223389?ref=tgt_adv_XS000000&AFID=google_pla_df&fndsrc=tmnv&DFA=71700000097017935&CPNG=PLA_DVM%2Ba064R0000137S8VQAU-Unilever_SCL_GoogleSearch_July_2022-681544&adgroup=PLA_Unilever_SCL&LID=700000001393753pgs&network=g&device=c&location=1022362&gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDJzCSrt8Idb2300lqIDusDvcUHi6zeDawJ3Ju3dzmp-_9D_ROWiR2oaAom1EALw_wcB&gclsrc=aw.ds",
+            "user_notes": "Compact Packaging, palm oil is detrimental to environment",
+            "star_rating": 4
+        },
+        "2": {
+            "name": "MacBook Air 2022",
+            "brand": "Apple",
+            "carbon_footprint":"yet to implement",
+            "price": 1199  ,
+            "vote_count": 0,
+            "share_link": "https://www.apple.com/shop/buy-mac/macbook-air/with-m2-chip",
+            "user_notes": "Reused metal",
+            "star_rating": 4
+        },
+        "3": {
+            "name": "Laundry Detergent",
+            "brand": "Tide",
+            "carbon_footprint":"yet to implement",
+            "price": 21.49,
+            "vote_count": 0,
+            "share_link": "https://www.target.com/p/tide-high-efficiency-liquid-laundry-detergent-original-154-fl-oz-160/-/A-77598304?ref=tgt_adv_XS000000&AFID=google_ssc_df&fndsrc=tmnv&DFA=71700000093165401&CPNG=PLA_DVM%2Ba064R0000136fS9QAI-P%26G_HP_Fabric+Care_Google+Search_SSC_Q1_2022-635904&adgroup=Fabric+Care&LID=700000002508819pgs&network=u&device=c&location=1022362&gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDIavuuMePBLO9k7WfHlN2vW4Vt6ckt81z1GwKoP_p2rscETawDE3BIaAllnEALw_wcB&gclsrc=aw.ds",
+            "user_notes": "Hard plastic, hard to dispose of properly ",
+            "star_rating": 3
+        },
+        "4": {
+            "name": "Reusable Straw",
+            "brand": "ALINK",
+            "carbon_footprint":"yet to implement",
+            "price": 5.69,
+            "vote_count": 0,
+            "share_link": "https://www.amazon.com/ALINK-Reusable-Replacement-Signature-Starbucks/dp/B072ZWWYR2/ref=asc_df_B072ZWWYR2/?tag=hyprod-20&linkCode=df0&hvadid=198056903981&hvpos=&hvnetw=g&hvrand=12947782959400244746&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1022362&hvtargid=pla-541356597592&psc=1",
+            "user_notes": "Eliminates need for one time use straws",
+            "star_rating": 5
+        },
+        "5": {
+            "name": "Purified Drinking Water",
+            "brand": "Kirkland Signature ",
+            "carbon_footprint":"yet to implement",
+            "price": 25.40,
+            "vote_count": 0,
+            "share_link": "https://www.amazon.com/Kirkland-Signature-Purified-Drinking-Water/dp/B00QGMOJ4Y/ref=asc_df_B00QGMOJ4Y/?tag=hyprod-20&linkCode=df0&hvadid=416635160311&hvpos=&hvnetw=g&hvrand=5097743857659222904&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1022362&hvtargid=pla-836558484142&psc=1&tag=&ref=&adgrpid=93863647357&hvpone=&hvptwo=&hvadid=416635160311&hvpos=&hvnetw=g&hvrand=5097743857659222904&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1022362&hvtargid=pla-836558484142",
+            "user_notes": "One-time-use bottles end up in the ocean",
+            "star_rating": 1
+        },
+        "6": {
+            "name": "Plastic Drinking Straws",
+            "brand": "Rienar",
+            "carbon_footprint":"yet to implement",
+            "price": 1.96,
+            "vote_count": 0,
+            "share_link": "https://www.walmart.com/ip/Colorful-Extra-Long-Flexible-Bendy-Party-Disposabl-Drinking-Straws-100-Pieces/964125320?wmlspartner=wlpa&selectedSellerId=101175168&&adid=22222222227117082014&wl0=&wl1=g&wl2=c&wl3=235582637243&wl4=pla-388706410938&wl5=1022362&wl6=&wl7=&wl8=&wl9=pla&wl10=568063391&wl11=online&wl12=964125320&veh=sem&gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDJpuZ8IGkzNkiZSKbLlNBM5KxrtWggbjYsLeFWVA-BsFjPdc_IsoqMaAnMREALw_wcB&gclsrc=aw.ds",
+            "user_notes": "Plastic straws hurt wildlife",
+            "star_rating": 1
+        },
+        "7": {
+            "name": "Compostable Drinking Straws",
+            "brand": "up&up",
+            "carbon_footprint":"yet to implement",
+            "price": 1.99,
+            "vote_count": 0,
+            "share_link": "https://www.target.com/p/straws-50ct-1-69oz-up-38-up-8482/-/A-84301666?ref=tgt_adv_XS000000&AFID=google_pla_df&fndsrc=tgtao&DFA=71700000049427608&CPNG=PLA_Household%2BEssentials%2BShopping_Local%7CHousehold%2BEssentials_Ecomm_Essentials&adgroup=SC_Household&LID=700000001170770pgs&LNM=PRODUCT_GROUP&network=g&device=c&location=1022362&targetid=pla-361961677116&ds_rl=1246978&ds_rl=1248099&gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDITEn_NT1boQ9AfKZZBTUrAVwYHuL-xbxea2-Xwxl0uVI7XA-OyVMUaAhCeEALw_wcB&gclsrc=aw.ds",
+            "user_notes": "Compostable straws have a smaller impact on nature",
+            "star_rating": 3
+        }
+    }
+}
