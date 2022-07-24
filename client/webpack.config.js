@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
@@ -30,11 +29,24 @@ module.exports = (env, options) => {
           use: ['babel-loader'],
         },
         {
-          test: /\.css$/,
+          test: /\.s[ac]ss$/i,
           use: [
-            MiniCssExtractPlugin.loader,
-            'css-loader',
-            'postcss-loader',
+            // Creates `style` nodes from JS strings
+            { loader: 'style-loader' },
+            // Translates CSS into CommonJS
+            // Compiles Sass to CSS
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  // getLocalIdent: getCSSModuleLocalIdent,
+                  localIdentName: '[name]_[local]_[hash:base64]',
+                },
+                importLoaders: 2,
+                sourceMap: true,
+              },
+            },
+            { loader: 'sass-loader' },
           ],
         },
         {
@@ -49,7 +61,6 @@ module.exports = (env, options) => {
     plugins: [
       // @ts-ignore
       new ESLintPlugin({}),
-      new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'public/index.html'),
         inject: true,
