@@ -1,3 +1,4 @@
+const { exec } = require('child_process');
 import express, { Request, Response } from 'express';
 import path from 'path';
 const fsExtra = require('fs-extra');
@@ -39,6 +40,30 @@ app.post(
   function (req: Request, res: Response) {
     getPrediction(req, res);
   }
+);
+
+const runPython = (arg: string, req: Request, res: Response) => {
+  const command = `python dbConnection.py ${arg}`;
+  exec(
+    command,
+    {
+      cwd: __dirname,
+    },
+    function (error: string, stdout: string, stderr: string) {
+      if (error || stderr) {
+        console.log(`Python error: ${error}`);
+        console.log(`Python stderr: ${stderr}`);
+        console.log(stdout);
+
+        process.exit(1);
+      }
+      res.send(stdout);
+    }
+  );
+};
+
+app.get('/api/data', upload.single('file'), (req: Request, res: Response) =>
+  runPython('print', req, res)
 );
 
 //handle production
