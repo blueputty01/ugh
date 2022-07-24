@@ -2,6 +2,7 @@ import takePic from './assets/takePic.png';
 import home from './assets/home.png';
 import profile from './assets/profile.png';
 import test from './assets/test.png';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const elements = ['one', 'two', 'three', 'four'];
@@ -28,13 +29,13 @@ export default function Home() {
         })}
       </div>
       <div className="bottomBar">
-        <a href="#news">
+        <Link to="../home">
           <img src={home}></img>
-        </a>
-        <a href="#news">
+        </Link>
+        <Link to="../camera">
           <img src={takePic}></img>
-        </a>
-        <a href="#news">
+        </Link>
+        <a href="../profile">
           <img src={profile}></img>
         </a>
       </div>
