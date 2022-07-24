@@ -2,6 +2,7 @@ import takePic from './assets/takePic.png';
 import home from './assets/home.png';
 import profile from './assets/profile.png';
 import test from './assets/test.png';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -29,9 +30,9 @@ export default function Home() {
         <a href="#news">
           <img src={home}></img>
         </a>
-        <a href="#news">
+        <Link to="camera">
           <img src={takePic}></img>
-        </a>
+        </Link>
         <a href="#news">
           <img src={profile}></img>
         </a>

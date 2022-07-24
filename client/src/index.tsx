@@ -6,6 +6,7 @@ import './index.css';
 import Welcome from './Welcome';
 import Camera from './Camera';
 import Home from './Home';
+import Feed from './Feed';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +14,8 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="home" element={<Home />} />
-        <Route path="upload" element={<Camera />} />
+        <Route path="camera" element={<Camera />} />
+        <Route path="profile" element={<Feed />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
