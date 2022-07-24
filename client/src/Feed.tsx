@@ -4,8 +4,6 @@ import profile from './assets/profile.png';
 import test from './assets/test.png';
 
 export default function Home() {
-  const elements = ['one', 'two', 'three', 'four'];
-
   return (
     <body className="mainPage">
       <div className="topBar">
