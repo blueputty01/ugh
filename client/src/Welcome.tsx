@@ -11,9 +11,9 @@ export default function Welcome() {
         <h2 className="text-1">Green Receipts</h2>
       </div>
       <div>
-        <a href="home">
+        <Link to="home">
           <button className="continue">Continue</button>
-        </a>
+        </Link>
       </div>
     </div>
   );
