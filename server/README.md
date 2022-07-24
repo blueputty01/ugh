@@ -7,17 +7,14 @@
 
 ## ❓ General
 
-
-
 ## 📑 Documentation
 
-Server starts on localhost port 5000. POST request using URLs below. Key for file in request body must be `file`.
+Server starts on `localhost:5000`.
 
-### Dependencies 
+### Uploading receipt for OCR
 
+`POST` request to `/api/upload` File in request body must be `file` and be accepted mimetype `['image/jpeg', 'image/png', 'application/pdf']`
 
-## ⚙️ Technologies Used
+### ⚙️ Technologies Used
 
-- Python, Tensorflow
-- TypeScript, Express
-
+- Express
