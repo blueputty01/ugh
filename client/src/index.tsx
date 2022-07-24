@@ -5,12 +5,14 @@ import './index.css';
 
 import Welcome from './Welcome';
 import Camera from './Camera';
+import Home from './Home';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Welcome />} />
+        <Route path="home" element={<Home />} />
         <Route path="upload" element={<Camera />} />
       </Routes>
     </BrowserRouter>
