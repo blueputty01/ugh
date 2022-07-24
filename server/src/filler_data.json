@@ -39,8 +39,8 @@
             "vote_count": 0,
             "share_link": "https://www.amazon.com/ALINK-Reusable-Replacement-Signature-Starbucks/dp/B072ZWWYR2/ref=asc_df_B072ZWWYR2/?tag=hyprod-20&linkCode=df0&hvadid=198056903981&hvpos=&hvnetw=g&hvrand=12947782959400244746&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1022362&hvtargid=pla-541356597592&psc=1",
             "user_notes": "Eliminates need for one time use straws",
-            "star_rating": 5
-        },
+            "star_rating": 5,
+            "image_link": "https://m.media-amazon.com/images/I/71oPmKHLhFL._AC_SX679_PIbundle-10,TopRight,0,0_SH20_.jpg"        },
         "5": {
             "name": "Purified Drinking Water",
             "brand": "Kirkland Signature ",
@@ -59,17 +59,19 @@
             "vote_count": 0,
             "share_link": "https://www.walmart.com/ip/Colorful-Extra-Long-Flexible-Bendy-Party-Disposabl-Drinking-Straws-100-Pieces/964125320?wmlspartner=wlpa&selectedSellerId=101175168&&adid=22222222227117082014&wl0=&wl1=g&wl2=c&wl3=235582637243&wl4=pla-388706410938&wl5=1022362&wl6=&wl7=&wl8=&wl9=pla&wl10=568063391&wl11=online&wl12=964125320&veh=sem&gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDJpuZ8IGkzNkiZSKbLlNBM5KxrtWggbjYsLeFWVA-BsFjPdc_IsoqMaAnMREALw_wcB&gclsrc=aw.ds",
             "user_notes": "Plastic straws hurt wildlife",
-            "star_rating": 1
+            "star_rating": 1,
+            "image_link": "https://i5.walmartimages.com/asr/639f158e-6359-4c4f-801b-27e2f54f60c4.13d71c8a7f8b21d0aad3c5d60bc6c554.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
         },
         "7": {
-            "name": "Compostable Drinking Straws",
-            "brand": "up&up",
+            "name": "Compostable Paper Straws",
+            "brand": "Hosted",
             "carbon_footprint":"yet to implement",
-            "price": 1.99,
+            "price": 2.99,
             "vote_count": 0,
-            "share_link": "https://www.target.com/p/straws-50ct-1-69oz-up-38-up-8482/-/A-84301666?ref=tgt_adv_XS000000&AFID=google_pla_df&fndsrc=tgtao&DFA=71700000049427608&CPNG=PLA_Household%2BEssentials%2BShopping_Local%7CHousehold%2BEssentials_Ecomm_Essentials&adgroup=SC_Household&LID=700000001170770pgs&LNM=PRODUCT_GROUP&network=g&device=c&location=1022362&targetid=pla-361961677116&ds_rl=1246978&ds_rl=1248099&gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDITEn_NT1boQ9AfKZZBTUrAVwYHuL-xbxea2-Xwxl0uVI7XA-OyVMUaAhCeEALw_wcB&gclsrc=aw.ds",
+            "share_link": "https://www.target.com/p/hosted-compostable-printed-paper-straws-50ct/-/A-85693806?ref=tgt_adv_XS000000&AFID=google_pla_df_free_online&CPNG=Household%2BEssentials&adgroup=253-5",
             "user_notes": "Compostable straws have a smaller impact on nature",
-            "star_rating": 3
+            "star_rating": 3,
+            "image_link": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcROo3QMrvBJZ6ThoObVK8bD6TLQgPGeHCrQOBEU8o5ivfD8Ghgaa0VBljJphBANw2BRuHppsKrBwSRY9UeCVPkuGbUWBF5qII7YfcJsR-B5A8N0vhscdtfooQ&usqp=CAE"
         }
     }
 }
