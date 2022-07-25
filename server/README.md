@@ -9,7 +9,7 @@
 
 ## 📑 Documentation
 
-Server starts on `localhost:5000`.
+Server starts on `localhost:5000`. Create .env file holding API_KEY and QUEUE_ID for ButlerLabs API
 
 ### Uploading receipt for OCR
 
@@ -18,3 +18,4 @@ Server starts on `localhost:5000`.
 ### ⚙️ Technologies Used
 
 - Express
+- ButlerLabs API

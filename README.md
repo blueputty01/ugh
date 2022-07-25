@@ -37,7 +37,6 @@ Build client: `npm run build`
 ### 💻 Client:
 
 - React
-- Tailwind CSS
 
 ### 🌐 Server:
 
