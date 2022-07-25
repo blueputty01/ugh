@@ -81,7 +81,7 @@ class sql:
         conn.commit()
 
 
-mySQL = sql().create_tables()
+mySQL = sql()
 dir_path = Path(os.path.dirname(os.path.realpath(__file__)))
 dir_path = dir_path / 'uber_hack_app1.sqlite'
 sqllite_conn = mySQL.create_connection(dir_path.resolve())
