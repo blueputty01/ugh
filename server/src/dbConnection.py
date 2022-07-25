@@ -16,7 +16,7 @@ parser.add_argument(
 # add specific product info
 parser.add_argument("--addProd", help="add specific product info to database",
                     nargs="*")
-parser.add_argument("print")
+parser.add_argument("print", nargs="*")
 args = parser.parse_args()
 
 # clean up args given

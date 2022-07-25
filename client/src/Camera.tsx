@@ -35,11 +35,15 @@ export default function Camera() {
     }
   }, [webcamRef]);
 
-  const sendImage = () => {
+  const sendImage = async () => {
     const file = DataURIToBlob(imgBase64);
     const data = new FormData();
     data.append('file', file, 'screenshot');
-    axios.post(`${server}/api/upload`, data);
+    const res = await axios.post(`${server}/api/upload`, data);
+    if (res.status === 200) {
+      setImgBase64('');
+      console.log('Image uploaded successfully');
+    }
   };
 
   return (
