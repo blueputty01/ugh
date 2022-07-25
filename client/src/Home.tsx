@@ -1,7 +1,6 @@
 import takePic from './assets/takePic.png';
 import home from './assets/home.png';
 import profile from './assets/profile.png';
-import test from './assets/test.png';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { ReactElement, useEffect, useState } from 'react';
@@ -15,9 +14,14 @@ function Product(props: ProductProps) {
     'https://oceanservice.noaa.gov/facts/microplastics.html#:~:text=Plastic%20debris%20can%20come%20in,as%20some%20cleansers%20and%20toothpastes.';
 
   const lookup: {
-    [key: string]: { dangers: ReactElement; recycling: ReactElement };
+    [key: string]: {
+      dangers: ReactElement;
+      recycling: ReactElement;
+      imgSrc: string;
+    };
   } = {
     'abc-shampoo': {
+      imgSrc: 'https://m.media-amazon.com/images/I/61m8RZMZZxL._SL1500_.jpg',
       dangers: (
         <div>
           Users have marked this product as containing microplastics based on
@@ -33,19 +37,26 @@ function Product(props: ProductProps) {
         </div>
       ),
     },
-    'halo-infinite': {
+    haloinfinite: {
+      imgSrc:
+        'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6429/6429556_sd.jpg',
       dangers: (
         <div>
-          Users have marked this product as containing microplastics based on
-          its ingredients list.{' '}
-          <a href={microplasticsLink}>Read more about microplastics</a>
+          <a href="https://www.microsoft.com/en-ms/p/halo-infinite/9pp5g1f0c2b6">
+            Digital alternatives
+          </a>{' '}
+          to this product may decreaese energy used in production (and be
+          cheaper!).
         </div>
       ),
       recycling: (
         <div>
           This packaging contains type 1 plastic, which should be recyclable at
-          the curb.{''}
-          <a href="http://">See recycling centers that accept this plastic</a>
+          the curb.{' '}
+          <a href="http://">
+            {' '}
+            See recycling centers that accept this plastic.{' '}
+          </a>
           CDs, the major component reported by users, are only recyclable at{' '}
           <a href="http://">Specific locations</a>. We suggest looking at
           similar{' '}
@@ -58,18 +69,24 @@ function Product(props: ProductProps) {
     },
   };
 
-  const info = lookup[props.product];
+  const info = lookup[props.product.toLowerCase()];
 
   return (
     <div className="productBox">
       <div className="product">
         <div className="productDescription">
           <h2>{props.product}</h2>
-          {info.dangers}
-          {info.recycling}
+          <p>Possible negatives:</p>
+          {info?.dangers}
+          <p>Recycling information:</p>
+          {info?.recycling}
         </div>
 
-        <img className="productImg" src={test}></img>
+        <img
+          className="productImg"
+          src={info?.imgSrc ?? ''}
+          style={{ height: '10rem' }}
+        ></img>
       </div>
       <div className="productButtons">
         <button>Vote</button>

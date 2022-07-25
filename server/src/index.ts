@@ -23,7 +23,7 @@ const upload = multer({ dest: tempDir });
 app.use(express.json());
 app.use(cors());
 
-const runPython = (arg: string, req: Request, res: Response) => {
+const runPython = (arg: string, req?: Request, res?: Response) => {
   const command = `python dbConnection.py ${arg}`;
   console.log(command);
 
@@ -40,7 +40,7 @@ const runPython = (arg: string, req: Request, res: Response) => {
 
         process.exit(1);
       }
-      res.send(stdout);
+      res?.send(stdout);
     }
   );
 };
@@ -73,7 +73,7 @@ const getPrediction = async (req: Request, res: Response) => {
   });
 
   data.forEach((item) => {
-    runPython(`--addProd ${item.name} ${item.price}`, req, res);
+    runPython(`--addProd ${item.name} ${item.price}`);
   });
 };
 

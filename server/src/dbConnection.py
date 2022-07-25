@@ -118,10 +118,9 @@ if args.addRec != None:
 elif args.addProd:
     a = list(args.addProd)
     while(len(a) < 4):
-        a.append(0)
-    print(a)
+        a.append('0')
     args.addRec = preproccess(a)
-    mySQL.insertReceiptItemData(args.addProd, sqllite_conn)
+    mySQL.insertReceiptItemData(a, sqllite_conn)
 
 elif args.print:
     printTable()
