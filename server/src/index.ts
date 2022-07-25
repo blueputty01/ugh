@@ -73,11 +73,7 @@ const getPrediction = async (req: Request, res: Response) => {
   });
 
   data.forEach((item) => {
-    const args = [];
-    args.push(item.name);
-    args.push(item.price);
-
-    runPython(`--addProd ${args}`, req, res);
+    runPython(`--addProd ${item.name} ${item.price}`, req, res);
   });
 };
 

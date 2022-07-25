@@ -89,14 +89,18 @@ sqllite_conn = mySQL.create_connection(dir_path.resolve())
 
 
 def printTable():
-    print("[")
+    data = []
     name = "receiptsItems"
     exists = sqllite_conn.execute(
-        f"SELECT name FROM sqlite_master WHERE type='table' AND name='{{name}}'")
+        f"SELECT name FROM sqlite_master WHERE type='table' AND name='{name}'")
     if exists.fetchone() is not None:
         for row in sqllite_conn.execute(f"SELECT * FROM {name}"):
-            print(row + ", ")
-    print("]")
+            name = row[0]
+            price = row[1]
+            receiptID = row[2]
+            obj = {'name': name, 'price': price, 'receiptID': receiptID}
+            data.append(obj)
+    print(data)
 
 # example insertion
 # mySQL.insertReceiptData(['Walmart','49 Fischer Crossings Dr Sharpsburg, GA 30277 ','01/18/2022',1, 142.09, 1011, 8], sqllite_conn)
