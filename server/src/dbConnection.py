@@ -1,3 +1,4 @@
+import json
 import os
 from pathlib import Path
 import sqlite3
@@ -100,7 +101,8 @@ def printTable():
             receiptID = row[2]
             obj = {'name': name, 'price': price, 'receiptID': receiptID}
             data.append(obj)
-    print(data)
+    json_print = json.dumps(data, indent=2)
+    print(json_print)
 
 # example insertion
 # mySQL.insertReceiptData(['Walmart','49 Fischer Crossings Dr Sharpsburg, GA 30277 ','01/18/2022',1, 142.09, 1011, 8], sqllite_conn)
@@ -114,7 +116,11 @@ if args.addRec != None:
 
 # user gives add product info param
 elif args.addProd:
-    args.addRec = preproccess(list(args.addProd))
+    a = list(args.addProd)
+    while(len(a) < 4):
+        a.append(0)
+    print(a)
+    args.addRec = preproccess(a)
     mySQL.insertReceiptItemData(args.addProd, sqllite_conn)
 
 elif args.print:

@@ -34,7 +34,7 @@ button {
   color: #000000;
 }
 .productBoxes {
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 1rem 4rem 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -48,13 +48,20 @@ button {
   color: black;
   padding: 2rem;
   border-radius: 1rem;
-  width: 20rem;
+  /* width: 20rem; */
   /* max-width: 80rem; */
 }
 .product {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  column-gap: 2rem;
+}
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 .productButtons {
   margin-top: 1rem;

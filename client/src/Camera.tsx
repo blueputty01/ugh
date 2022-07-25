@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Webcam from 'react-webcam';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const videoConstraints = {
   width: 350,
@@ -26,7 +27,9 @@ const DataURIToBlob = (dataURI: string) => {
 
 export default function Camera() {
   const [imgBase64, setImgBase64] = useState<string>('');
-  const webcamRef = React.useRef<Webcam>(null);
+  const webcamRef = useRef<Webcam>(null);
+  const inputFileButton = useRef<HTMLInputElement>(null);
+  const nav = useNavigate();
 
   const capture = React.useCallback(() => {
     if (webcamRef.current) {
@@ -34,6 +37,10 @@ export default function Camera() {
       setImgBase64(imageSrc ?? '');
     }
   }, [webcamRef]);
+
+  const success = () => {
+    nav('../home');
+  };
 
   const sendImage = async () => {
     const file = DataURIToBlob(imgBase64);
@@ -43,7 +50,23 @@ export default function Camera() {
     if (res.status === 200) {
       setImgBase64('');
       console.log('Image uploaded successfully');
+      success();
     }
+  };
+
+  const onFakeUploadClick = () => {
+    (inputFileButton.current! as HTMLInputElement).click();
+  };
+
+  const onFileUpload = async (event: React.FormEvent<HTMLInputElement>) => {
+    const target = event.target as HTMLInputElement;
+    const selectedFile = target.files![0];
+
+    const data = new FormData();
+    data.append('file', selectedFile, selectedFile.name);
+
+    const res = await axios.post(`${server}/api/upload`, data);
+    success();
   };
 
   return (
@@ -80,14 +103,38 @@ export default function Camera() {
             </button>
           </div>
         ) : (
-          <button
-            type="submit"
-            color="secondary"
-            onClick={capture}
-            className="webcam-btn"
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              columnGap: '1rem',
+            }}
           >
-            Capture
-          </button>
+            <button
+              type="submit"
+              color="secondary"
+              onClick={capture}
+              className="webcam-btn"
+            >
+              Capture
+            </button>
+            <button
+              type="submit"
+              color="secondary"
+              onClick={onFakeUploadClick}
+              className="webcam-btn"
+            >
+              Upload
+            </button>
+            <input
+              type="file"
+              id="file"
+              ref={inputFileButton}
+              style={{ display: 'none' }}
+              onChange={onFileUpload}
+              accept=".jpeg,.jpg"
+            />
+          </div>
         )}
       </div>
     </div>
